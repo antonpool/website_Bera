@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+<div class="features">
+    <H1>Новости на сайте</H1>
+
+    {% for el in news %} <br> <br>
+        <div class="alert alert-warning">
+                <h3>{{ el.title}}</h3>
+                <p>{{ el.anons}} рублей</p>
+                <p>{{ el.full_text}}</p>
+                {% if el.image %}
+                <img src="{{ el.image.url }}" class="img-thumbnail">
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+
