@@ -1,17 +1,17 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 
-{% block title %}Новости на сайте{% endblock %}
+{% block title %}{% news.title %}{% endblock %}
 
 {% block content %}
 <div class="features">
-    <H1>Новости на сайте</H1>
+    <H1> !!! </H1>
 
     {% for el in news %} <br> <br>
         <div class="alert alert-warning">
                 {% comment %} <h3>{{ el.title}}</h3> {% endcomment %}
-                <h3><a href="{{ el.get_absolute_url }}">{{ el.title }}</a></h3>
-                <p>{{ el.anons}} рублей</p>
+                <h3 href="{{el.get_absolute_url}}"> {{el.title}} </h3>
+                <p>{{ post.anons}} рублей</p>
                 <p>{{ el.full_text}}</p>
                 {% if el.image %}
                 <img src="{{ el.image.url }}" class="img-thumbnail">

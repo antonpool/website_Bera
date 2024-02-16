@@ -1,0 +1,21 @@
+
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}Новости на сайте{% endblock %}
+
+{% block content %}
+
+<div class="features_post">
+                {% comment %} <h3>{{ el.title}}</h3> {% endcomment %}
+                <h3 href=""> {{post.title}} </h3>
+                <p>{{ post.anons}} рублей</p>
+                <p>{{ post.full_text}}</p>
+                {% if post.image %}
+                <img src="{{ post.image.url }}" class="img-thumbnail">
+            {% endif %}
+</div>
+
+{% endblock %}
+
+

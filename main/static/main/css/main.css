@@ -88,6 +88,14 @@ main .features {
     margin-right: auto;
     width: 75%;
     }
+
+/* main .features_post {
+        background: #5ace5a;
+        color: #fff;
+        margin-left: auto;
+        margin-right: auto;
+        width: 10%;
+        }     */
 main .img-thumbnail {
   width: 400px;
   border-radius: 10%;
